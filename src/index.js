@@ -1,15 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
 
-
-const App = () => {
-    return <header>
-        <h1>Inventory App</h1>
-    </header>
-}
-
-
-
-ReactDOM.render(<App />, document.querySelector('#root'));
-
-
+ReactDOM.render(<App />, document.querySelector("#root"));
