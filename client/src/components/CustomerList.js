@@ -6,8 +6,8 @@ class CustomerList extends Component {
     return this.props.customers.map(customer => {
       return (
         
-        <div className="ui celled list">
-          <Listitem customer={customer} />
+        <div key={customer.id} className="ui celled list">
+          <Listitem delUserInput={this.props.delUserInput} customer={customer} />
         </div>
       );
 

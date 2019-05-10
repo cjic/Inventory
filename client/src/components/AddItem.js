@@ -5,6 +5,7 @@ class AddItem extends Component {
     super(props);
 
     this.state = {
+      id: "",
       firstname: "",
       lastname: "",
       email: ""
@@ -13,13 +14,18 @@ class AddItem extends Component {
 
   submitInput = e => {
     e.preventDefault();
-    this.props.addUserInput(this.state.firstname, this.state.lastname, this.state.email);
-   
+    this.props.addUserInput(
+      this.state.firstname,
+      this.state.lastname,
+      this.state.email
+    );
+
     this.setState({
+      id: "",
       firstname: "",
       lastname: "",
       email: ""
-    })
+    });
   };
 
   inputChange = e =>
@@ -29,8 +35,8 @@ class AddItem extends Component {
 
   render() {
     return (
-      <form onSubmit={this.submitInput} className="ui form" >
-        <div className="three fields">
+      <form onSubmit={this.submitInput} className="ui form">
+        <div key={this.state.id} className="three fields">
           <div className="field">
             <label>First name</label>
             <input

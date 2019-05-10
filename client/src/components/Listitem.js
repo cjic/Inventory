@@ -1,13 +1,21 @@
 import React, { Component } from "react";
+import ModalPage from "./ModalPage";
 
 class Listitem extends Component {
   render() {
-    const { firstname, lastname, email } = this.props.customer;
+    const { id, firstname, lastname, email } = this.props.customer;
 
     return (
       <div className="item">
+    
         <div className="right floated content">
-          <button className="ui button">Edit</button>
+          <ModalPage
+            buttonLabel="Edit"
+            id={id}
+            firstname={firstname}
+            lastname={lastname}
+            delUserInput={this.props.delUserInput}
+          />
         </div>
         <i className="user icon" />
         <div className="content">
@@ -21,21 +29,5 @@ class Listitem extends Component {
     );
   }
 }
-
-// const Listitem = props => {
-
-//   return (
-//     <div className="item">
-//       <i className="user icon" />
-//       <div className="content">
-//         <a href="/" className="header">
-//           {props.customer}
-//         </a>
-
-//         <p className="description">{props.email}</p>
-//       </div>
-//     </div>
-//   );
-// };
 
 export default Listitem;
