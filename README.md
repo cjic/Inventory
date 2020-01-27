@@ -1,5 +1,7 @@
 ## Inventory APP
 
+A simple app used to keep track of customer list 
+
  "npm run dev" to start app client & server
 
 ##Database is setup using mongodb, express and nodejs.
@@ -8,4 +10,3 @@
 
 http://localhost:5000/api/items
 
-##However app has not been connected to database. **Unfinished**
